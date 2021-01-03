@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tax Calculator</title>
+	<script type="text/javascript" src="src/validations.js"></script>
+</head>
+<body class="taxCalculator">
+<div id="Wrapper" class="taxWrapper">
+	<div id="main" class="taxMain">
+	<div class="taxHead"><h1>Tax Estimation</h1></div>
+		<div class="taxInnerWrapper">
+			<div class="taxFrm">
+			<form name="taxForm" class="myTaxClass">
+				<h3>Income and Tax Information</h3>
+				<div class="taxClass"><label for="taxStatus">Tax Filing Status </label>
+					<select name="taxFilingStatus" id="taxFilingStatusID"><option value="S" selected="selected">Single</option>
+						<option value="H">Head of Household</option>
+						<option value="MS">Married - Separately</option>
+						<option value="MJ">Married - Jointly</option>
+						<option value="T">Trust</option>
+					</select>
+				</div>
+				<div class="taxClass">
+					<label>Gross Annual Income</label><input type="text" size="10" name="taxGrossIncome" value="0" id="taxGrossIncomeID" data-validation="validation-1"> 
+					<span id="validation-1" class="validation-output"></span>
+				</div>		
+				<div class="taxClass">
+					<label>Amount of gross income considered 'unearned'/investment income</label><input type="text" size="10" name="taxInvestment" value="0" id="taxInvestmentID" data-validation="validation-2">
+					<span id="validation-2" class="validation-output"></span>				
+				</div>
+				<div class="taxClass">
+					<label>Qualified Plan/IRA Contribution</label><input type="text" size="10" name="taxIRA" value="0" id="taxIRAID" data-validation="validation-3">
+					<span id="validation-3" class="validation-output"></span>
+				</div>
+				<div class="taxClass">
+					<label>Itemized Deductions - $0 for Standard</label><input type="text" size="10" name="taxStandardDeduction" value="0" id="taxStandardDeductionID" data-validation="validation-4">
+					<span id="validation-4" class="validation-output"></span>
+				</div>
+				<div class="taxClass">
+					<label>Number of Personal Exemptions</label><input type="text" name="taxExemptions" size="10" value="0" id="taxExemptionsID" data-validation="validation-5">
+					<span id="validation-5" class="validation-output"></span>					
+				</div>
+				<div class="taxClass">
+					<label>Number of Dependent Children</label><input type="text" name="taxDependents" size="10" value="0" id="taxDependentsID" data-validation="validation-6">
+					<span id="validation-6" class="validation-output"></span>					
+				</div>
+				<div class="btn">
+					<button type="button" class="mySubmit" id="mySubmitID" onclick="getTaxDetails()">Submit</button>&nbsp;&nbsp;&nbsp;<input type="reset" class="mySubmit" id="myCancel" onclick="" value="Reset">
+				</div>
+			</form>
+			</div>
+		</div>	
+		<div id="taxStatus" class="taxInnerWrapper">
+			<div class="taxResult">
+			<h3>Estimated Tax Calculation</h3>
+			<div class="taxClass"><label>Gross Income:  </label><label id= "myGrossIncome"></label></div>
+			<div class="taxClass"><label>Qualified IRA Contributions:  </label><label id= "myContributation"><b></b></label></div>
+			<div class="taxClass"><label>Adjusted Gross Income:  </label><label id= "myAdjustedGrossIncome"></label></div>
+			<div class="taxClass"><label>Standard/Itemized Deductions:  </label><label id= "myDeduction"></label></div>
+			<div class="taxClass"><label>Personal Exemptions:  </label><label id= "myExemption"></label></div>
+			<div class="taxClass"><label>Taxable Income:  </label><label id= "myTaxableIncome"></label></div>
+			<div class="taxClass"><label>Tax Liability Before Credits:  </label><label id= "myTaxBeforeCredit"></label></div>
+			<div class="taxClass"><label>Child Tax Credits:  </label><label id= "myChildTaxCredit"></label></div>
+			<div class="taxClass"><label>Estimated Tax Liability:  </label><label id= "myEstimatedTax"></label></div>
+			</div>
+		</div>
+	</div>		
+</div>
+<style type="text/css">
+h3 {
+    padding-left: 10px;
+}
+.taxHead {
+    border-bottom: 1px solid;
+    text-align: center;
+}
+.taxInnerWrapper {
+    float: left;
+    width: 50%;
+}
+.taxClass {
+    float: left;
+    margin: 5px;
+    padding: 10px;
+    width: 100%;
+}
+.taxFrm label {
+    display: block;
+    float: left;
+    margin-right: 5px;
+    width: 390px;
+}
+.taxResult label {
+    display: block;
+    float: left;
+    width: 214px;
+}
+.btn {
+    padding-left: 157px;
+    padding-top: 20px;
+}
+</style>
+</body>
+</html>

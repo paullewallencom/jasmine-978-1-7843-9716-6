@@ -1,0 +1,16 @@
+[
+{
+"TaxFilingStatus": "S",
+"GrossIncome": 111200,
+"IRAContribution": 5500,
+"Exemptions": 0,
+"Dependent": 0
+},
+{
+"TaxFilingStatus": "S",
+"GrossIncome": 450000,
+"IRAContribution": 5500,
+"Exemptions": 0,
+"Dependent": 0
+}
+]

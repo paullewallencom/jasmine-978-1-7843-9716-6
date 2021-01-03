@@ -1,0 +1,30 @@
+[
+{
+"book": "Jasmine Cookbook",
+"author": " By Munish Sethi"
+},
+{
+"book": "The Art of Unix Programming",
+"author": " By Eric Raymond"
+},
+{
+"book": "The Psychology of Computer Programming",
+"author": " By Gerald M. Weinberg"
+},
+{
+"book": "The Practice of Programming",
+"author": " By Brian W. Kernighan, Rob Pike"
+},
+{
+"book": "The Design and Analysis of Algorithms",
+"author": " By Dexter Kozen"
+},
+{
+"book": "Introduction to UNIX",
+"author": " By David Schwartz"
+},
+{
+"book": "Data Structures and Algorithms",
+"author": " By John Hopcroft"
+}
+]
